@@ -21,7 +21,8 @@ namespace XF_HW2.ViewModels
             _navigationService = navigationService;
             GoHomeCommand = new DelegateCommand(async() => 
             {
-                await _navigationService.NavigateAsync("MainPage");
+                //await _navigationService.NavigateAsync("MainPage");
+                await _navigationService.NavigateAsync("xf:///MDPage/NaviPage/MainPage?title=Hello%20from%20Xamarin.Forms");
             });
         }
 
