@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage
+    x:Class="XF_HW2.Views.MDPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <ContentPage.Icon>
+                <OnPlatform
+                    x:TypeArguments="FileImageSource"
+                    Android="hamburger.png"
+                    WinPhone="Assets/hamburger.png"
+                    iOS="hamburger.png" />
+            </ContentPage.Icon>
+            <StackLayout
+                Margin="0,20,0,0"
+                HorizontalOptions="Fill"
+                VerticalOptions="Start">
+                <Button Command="{Binding GoMainPageCommand}" Text="首頁" />
+                <Button Command="{Binding GoProfileCommand}" Text="個人首頁" />
+                <Button Command="{Binding GoSetupCommand}" Text="主題佈景" />
+                <Button Command="{Binding GoLogoutCommand}" Text="登出" />
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

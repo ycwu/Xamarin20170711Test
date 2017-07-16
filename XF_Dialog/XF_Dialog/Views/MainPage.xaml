@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XF_Dialog.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    Title="MainPage"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+        <Label Margin="0,0,0,50" Text="您選擇的項目" />
+        <Button Command="{Binding 選擇項目Command}" Text="選擇項目" />
+        <Button Command="{Binding 注意事項對話窗Command}" Text="訊息確認" />
+    </StackLayout>
+</ContentPage>
